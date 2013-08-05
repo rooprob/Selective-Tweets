@@ -1,0 +1,6 @@
+php_value include_path ".:/usr/local/Selective-Tweets"
+
+RewriteEngine  on
+
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ %{REQUEST_URI}.php [L]

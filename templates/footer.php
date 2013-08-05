@@ -3,9 +3,18 @@
 <a href="https://twitter.com/andyy" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @andyy</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </div>
+<div style="float: left; width: 140px;">
+<a href="https://twitter.com/_rpf" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @_rpf</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+
 
 <p>
-This app was built by me - <a href="http://twitter.com/andyy">@andyy</a>. I hope you find it useful! It's grown quite popular, so if it helps you, your company, brand or cause, you may like to consider making a small donation.. :)
+The original app was built by <a
+href="http://twitter.com/andyy">@andyy</a>. He hopes you find it useful!
+It's grown quite popular, so if it helps you, your company, brand or
+cause, you may like to consider making a small donation to @andyy :)
+This fork is running on a server provided by @_rpf.
 </p>
 </div>
 

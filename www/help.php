@@ -51,7 +51,7 @@ Usually your updates will appear on Facebook within 2 minutes, however sometimes
 
 <li style="margin-top: 0.5em;">
 <strong>Have you installed the app correctly?</strong><br/>
-Go back to the setup page (<a href="http://apps.facebook.com/selectivetwitter/">http://apps.facebook.com/selectivetwitter/</a> for your personal profile, <a href="http://apps.facebook.com/selectivetwitter/pages.php">http://apps.facebook.com/selectivetwitter/pages.php</a> for fan pages) and check the following:
+Go back to the setup page (<a href="http://apps.facebook.com/<?php echo APP_NAME ?>/">http://apps.facebook.com/<?php echo APP_NAME ?>/</a> for your personal profile, <a href="http://apps.facebook.com/<?php echo APP_NAME ?>/pages.php">http://apps.facebook.com/<?php echo APP_NAME ?>/pages.php</a> for fan pages) and check the following:
 <ul>
 <li>Have you entered your twitter username correctly?</li>
 <li>Have you given the app permission to update your status on Facebook? (You'll see a message if not)</li>
@@ -65,7 +65,7 @@ Go back to the setup page (<a href="http://apps.facebook.com/selectivetwitter/">
 <h3>If your updates don't appear (or appear as blank entries) on Facebook mobile (iPhone etc):</h3>
 <h3>If your updates don't appear in the &quot;status updates&quot; filtered lists in the news feed and FB mobile apps:</h3>
 
-<p>These three issues are unfortunate side-effects caused by the app setting to include a link to your Twitter profile below each update. Basically they're bugs with Facebook not working as it promised :(  If you added the app after 28th June this feature is turned off by default. If you added the app before June 28th and have these problems, you can solve them by un-ticking the box to include a link to your twitter profile on the <a href="http://apps.facebook.com/selectivetwitter/settings.php">settings page</a>.</p>
+<p>These three issues are unfortunate side-effects caused by the app setting to include a link to your Twitter profile below each update. Basically they're bugs with Facebook not working as it promised :(  If you added the app after 28th June this feature is turned off by default. If you added the app before June 28th and have these problems, you can solve them by un-ticking the box to include a link to your twitter profile on the <a href="http://apps.facebook.com/<?php echo APP_NAME ?>/settings.php">settings page</a>.</p>
 */ ?>
 
 <h3>If the app used to work for you but doesn't any more:</h3>

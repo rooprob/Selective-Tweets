@@ -33,7 +33,11 @@ class TweetQueue
 	 */
 	public function enqueueTweet($tweet_id, $created_at, $user, $text, $entities, $source)
 	{
-		return $this->db->exec('INSERT INTO tweet_queue(tweet_id, created_at, user, text, entities, from_' . ($source == self::SOURCE_TRACK ? 'track' : 'search') . ') values (' . $this->db->quote($tweet_id) . "," . $this->db->quote($created_at) . "," . $this->db->quote($user) . "," . $this->db->quote($text) . "," . $this->db->quote($entities) . ", 1) ON DUPLICATE KEY UPDATE from_" . ($source == self::SOURCE_TRACK ? 'track' : 'search') . " = 1");
+		$result = $this->db->query("SELECT fbuid FROM selective_status_users WHERE twitterid = " .  $this->db->quote($user) . " limit 1");
+		if ($result && ($row = $result->fetch()) && (is_array($row))) {
+			return $this->db->exec('INSERT INTO tweet_queue(tweet_id, created_at, user, text, entities, from_' . ($source == self::SOURCE_TRACK ? 'track' : 'search') . ') values (' . $this->db->quote($tweet_id) . "," . $this->db->quote($created_at) . "," . $this->db->quote($user) . "," . $this->db->quote($text) . "," . $this->db->quote($entities) . ", 1) ON DUPLICATE KEY UPDATE from_" . ($source == self::SOURCE_TRACK ? 'track' : 'search') . " = 1");
+		}
+		return null;
 	}
 
 	/**
@@ -66,13 +70,7 @@ class TweetQueue
 	 */
 	public function clean()
 	{
-		$result = $this->db->query('select id from tweet_queue where created_at < date_sub(now(), interval 1 hour) order by sent = 0 desc, id desc limit 1');
-		if ($result && ($row = $result->fetch()) && (is_array($row))) {
-			$last_id = $row['id'];
-			if ($this->db->exec('insert ignore into tweet_queue2 select * from tweet_queue where id < ' . $last_id) || true) {
-				return $this->db->exec('delete from tweet_queue where id < ' . $last_id);
-			}
-		}
+		return $this->db->exec('delete from tweet_queue where created_at < date_sub(now(), interval 1 hour) and sent = 1');
 	}
 }
 

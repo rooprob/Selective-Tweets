@@ -15,6 +15,11 @@ if (!defined('ROOT_URL')) {
 	define('ROOT_URL', '/');
 }
 
+define('GIT_FORK', 'https://github.com/rooprob/Selective-Tweets');
+define('PUB_NAME', 'STSelectiveTwit');
+define('APP_NAME', 'stselectivetwit');
+define('GA_UA', 'UA-7425094-1');
+
 /*
 
 the config file should define the following constants:

@@ -14,7 +14,7 @@ $controller->requireLogin();
 $fb = $controller->getFacebook();
 
 if (!$controller->getCanPostToPages()) {
-	$url = $fb->getLoginURL(array('redirect_uri' => 'https://apps.facebook.com/selectivestatus/pages', 'scope' => 'publish_stream,manage_pages'));
+	$url = $fb->getLoginURL(array('redirect_uri' => 'https://apps.facebook.com/'. APP_NAME .'/pages', 'scope' => 'publish_stream,manage_pages'));
 	$controller->redirect($url);
 }
 

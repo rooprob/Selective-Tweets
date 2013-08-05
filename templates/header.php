@@ -15,7 +15,7 @@ a { color: #3B5998; text-decoration: none; }
 </style>
 
 <meta property="og:title" content="Selective Tweets"/>
-<meta property="og:image" content="http://graph.facebook.com/selectivetwitter/picture?type=large"/>
+<meta property="og:image" content="http://graph.facebook.com/<?php echo APP_NAME ?>/picture?type=large"/>
 
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 
@@ -28,7 +28,7 @@ a { color: #3B5998; text-decoration: none; }
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-7425094-1']);
+  _gaq.push(['_setAccount', '<?php echo GA_UA ?>']);
   _gaq.push(['_trackPageview']);
 
   (function() {
@@ -65,10 +65,17 @@ a { color: #3B5998; text-decoration: none; }
 </script>
 
 
-<h1 style="margin-top: 15px;">Welcome to Selective Tweets! (#fb)</h1>
+<h1 style="margin-top: 15px;">Welcome to <?php echo PUB_NAME ?>! (#fb)</h1>
 
 <p style="font-size: 15px; line-height: 19px;">Selective Tweets lets you update your Facebook status from Twitter - BUT only when you want.
 <br /><strong>Just end a tweet with the #fb hashtag</strong> when you want it to post to Facebook - simple!</p>
+
+<p style="font-size: 15px; line-height: 17px; font-weight: 900;
+font-style: italic; color: green;">Note this is a developer
+<a href="<?php echo GIT_FORK ?>">fork</a> of the original Facebook app
+<a href="https://apps.facebook.com/selectivetwitter/">Selective-Tweets</a>.
+The original by Andy Young andy@apexa.co.uk @andyy you should attribute any accolades.
+This fork was created by as Andy's site was down.<p>
 
 <?php include 'tabs.php'; ?>
 

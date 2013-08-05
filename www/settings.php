@@ -17,7 +17,7 @@ $can_publish_stream = $controller->getCanPublishStream();
 
 if (isset($_POST['sub_save_permission']) && !$can_publish_stream) {
 	// likely IE7 bug
-	$url = 'https://www.facebook.com/authorize.php?api_key=f1e3ea0bc8a86eb8dc9cb6b3d439dacd&v=1.0&ext_perm=publish_stream&next=' . ROOT_URL . '&next_cancel=https://apps.facebook.com/selectivetwitter/';
+	$url = 'https://www.facebook.com/authorize.php?api_key='.  FB_APP_ID .'&v=1.0&ext_perm=publish_stream&next=' . ROOT_URL . '&next_cancel=https://apps.facebook.com/'. APP_NAME .'/';
 	$controller->redirect($url);
 }
 
